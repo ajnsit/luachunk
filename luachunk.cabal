@@ -11,6 +11,15 @@ category:            Scripting
 build-type:          Simple
 cabal-version:       >=1.8
 
+source-repository head
+  type:     git
+  location: http://github.com/ajnsit/luachunk
+
+source-repository this
+  type:     git
+  location: http://github.com/ajnsit/luachunk/tree/v0.1.0.0
+  tag:      v0.1.0.0
+
 library
   hs-source-dirs:      src
   extensions:          OverloadedStrings, NoImplicitPrelude
