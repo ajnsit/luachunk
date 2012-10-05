@@ -43,13 +43,13 @@ data Header = Header
 
 -- | A Parsed Function
 data Func = Func
-  { fHeader :: FuncHeader
-  , fInstrs :: [Instruction]
-  , fConsts :: [Constant]
-  , fNested :: [Func]
-  , fLines  :: [Line]
-  , fLocals :: [Local]
-  , fUpvals :: [Upval]
+  { fHeader :: FuncHeader    -- ^ Header Data
+  , fInstrs :: [Instruction] -- ^ List of instructions (code)
+  , fConsts :: [Constant]    -- ^ List of constants
+  , fNested :: [Func]        -- ^ List of function prototypes
+  , fLines  :: [Line]        -- ^ Source line positions (optional debug data)
+  , fLocals :: [Local]       -- ^ List of locals (optional debug data)
+  , fUpvals :: [Upval]       -- ^ List of upvalues (optional debug data)
   }
   deriving Show
 
@@ -130,20 +130,24 @@ data Instruction
 
 
 -- | Parsed opcode fields
--- Here the width of various fields is not considered, we assume all fit within an int
 type FA   = Int
+-- | Parsed opcode fields
 type FB   = Int
+-- | Parsed opcode fields
 type FC   = Int
+-- | Parsed opcode fields
 type FBx  = Int
+-- | Parsed opcode fields
 type FsBx = Int
+-- | Parsed opcode fields
 type FAx  = Int
 
 -- | Parsed Constants
 data Constant
-  = CNil
-  | CBool Bool
-  | CNum Double
-  | CStr T.Text
+  = CNil        -- ^ Nil Value
+  | CBool Bool  -- ^ Boolean Value
+  | CNum Double -- ^ Numeric Value
+  | CStr T.Text -- ^ String Value
 
   deriving Show
 

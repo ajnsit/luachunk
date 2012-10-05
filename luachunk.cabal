@@ -15,9 +15,9 @@ library
   hs-source-dirs:      src
   extensions:          OverloadedStrings, NoImplicitPrelude
   exposed-modules:     Scripting.Lua.Chunk.Reader,
-                       Scripting.Lua.Chunk.Writer
+                       Scripting.Lua.Chunk.Writer,
+                       Scripting.Lua.Chunk.Types
   other-modules:       Scripting.Lua.Chunk.BitUtils,
-                       Scripting.Lua.Chunk.Types,
                        Scripting.Lua.Chunk.Endianness,
                        Scripting.Lua.Chunk.IEEE754
   build-depends:       base ==4.5.*,
