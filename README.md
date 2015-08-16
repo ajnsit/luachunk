@@ -3,6 +3,7 @@ LuaChunk (luachunk-0.1)
 
 Provides functions to read and write Lua Chunks.
 
+***IMPORTANT: Limitations: This code currently only supports 32 bit machines and Lua 5.1.***
 
 Copyright
 =========
